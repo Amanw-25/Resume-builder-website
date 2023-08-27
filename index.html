@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resume-Generator</title>
+    <link rel="icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYpUHWob4EDz38K-4B5axHF32YLvWiAA8ihA&usqp=CAU">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="cv-form">
+        <h1 class="heading" style="background-color: #5B9A8B;">Resume Generator</h1>
+        
+
+        <h1>Let’s start with your header</h1>
+        <p>Include your full name and at least one way for employers to reach you.</p>
+
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Personal Information</h3>
+
+                <div class="form-group">
+                    <label for="name" class="required" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+                sans-serif;" required>Enter Your Name</label><br>
+                    <input type="text" placeholder="Enter your Name" id="nameField" size="58" /><br>
+
+                </div>
+                <br>
+
+                <div class="form-group">
+                    <label for="phone" class="required"style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', 
+                Arial, sans-serif;">Enter Your Phone Number</label><br>
+                    <input type="text" placeholder="Enter your Number" id="contactField" size="58"><br>
+                </div><br>
+
+                <div class="form-group">
+                    <label for="add" class="required" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', 
+                Arial, sans-serif;">Enter Your Address</label><br>
+                    <textarea id="addressField" placeholder="Enter Your Address" rows="2" cols="60"></textarea>
+                </div><br>
+
+
+                <div class="form-group">
+                    <p><b>~Important Link~</b></p>
+
+                    <label for="Linked" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', 
+                Arial, sans-serif;">Linked In</label><br>
+                    <input type="text" placeholder="Linked-In ID" id="linkedField" size="58"><br>
+
+                </div><br>
+
+
+                <div class="form-group">
+
+
+                    <label for="git"
+                        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Git-Hub</label><br>
+                    <input type="text" placeholder="Git-Hub ID" id="gitField" size="58"><br>
+
+                </div><br>
+
+                <div class="form-group">
+
+
+                    <label for="insta"
+                        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, 
+                        sans-serif;">Email ID</label><br>
+                    <input type="text" placeholder=" Email ID" id="instaField" size="58"><br>
+
+                </div><br>
+
+
+
+                <!-- User Image -->
+                <label for="input-file"
+                    style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> Upload
+                    Image</label>
+                <!-- <img src="assests/user.png"
+                id="profile-pic"/> -->
+                <input type="file" accept="image/jpeg ,image/png ,image/jpg" id="input-file">
+                </div>
+
+
+
+            <div class="col-md-6">
+                <h3>Professional Information</h3>
+
+                <div class="form-group">
+                    <label for="obj" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', 
+                Arial, sans-serif;">Objective</label><br>
+                    <textarea id="objectiveField" class="form-group" placeholder="Enter here" rows="2"
+                        cols="60"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="job" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+                sans-serif;">Job Title</label><br>
+                    <input type="text" placeholder="Enter job title" id="job" size="58" /><br>
+
+                </div>
+
+                <div class="form-group mt-2" id="workE">
+                    <label for="work" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', 
+                Arial, sans-serif;">Work Experience</label><br>
+
+                    <textarea id="workExperienceField" class="form-group workEField" placeholder="Enter here" rows="2"
+                        cols="60"></textarea>
+
+                    <!-- <textarea class="form-control workEField" 
+                placeholder="Enter here" rows="2" cols="60"></textarea> -->
+
+                    <div class="container mt-2" id="WeAddButton" style="position: relative;">
+                        <button onclick="addnewWorkField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                    <br>
+
+                    <div class="form-group mt-2" id="skills">
+                        <label for="work" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', 
+                    Arial, sans-serif;">Skill</label><br>
+
+                        <textarea id="skillsField" class="form-group skillField" placeholder="Enter here" rows="2"
+                            cols="60"></textarea>
+
+                        <div class="container mt-2" id="skillAddButton" style="position: relative;">
+                            <button onclick="addnewskillField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                        <br>
+
+                    </div>
+
+
+                    <div class="form-group" id="aq">
+                        <label for="work" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', 
+                Arial, sans-serif;">Academic Qualification</label><br>
+
+                        <textarea id="obj" class="form-group EqField" placeholder="Enter here" rows="2"
+                            cols="60"></textarea>
+                        <!-- <textarea class="form-control EqField" 
+                placeholder="Enter here" rows="2" cols="10"></textarea> -->
+
+                        <div class="container mt-2 " id="aqAddButton" style="position: relative;">
+                            <button onclick="addnewEducationField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                        <br>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container text-center mt-5">
+            <button onclick="generateCV()" class=" btn-primary" 
+            style="background-color: #24a0ed ;">Generate CV
+            </button>
+        </div><br>
+    </div>
+
+
+
+
+    <div class="container" id="cv-template" style="width:100%;">
+        <div class="row">
+            <div class="col-md-4 py-5" style="text-align: center;">
+                <!-- First Col -->
+
+                <img src="assests/user.png" id="profile-pic" />
+
+                <div class="cont">
+                    <p id="namet1">Aman</p>
+                    <img id="img3" src="assests/phone.png" />
+                    <p id="contact1">9556655</p>
+                    <img id="img4" src="assests/loc.png" />
+                    <p id="addresst1">Indore</p>
+                    <hr>
+
+
+                    <p>
+                        <img id="img1" src="./assests/img1.png" />
+                        <a href="#1" id="link1">www.linked.in</a>
+                    </p>
+
+                    <p>
+                        <img id="img2" src="assests/GitHub.png" />
+                        <a href="#2" id="link2">www.github.in</a>
+                    </p>
+
+                    <p>
+                        <img id="img3" src="assests/insta.png" />
+                        <a href="#3" id="link3">www.insta.in</a>
+                    </p>
+                </div>
+                <hr>
+
+                <div>
+                    <h3 style="background-color: #C4C1A4;">Skill</h3>
+                    <ul id="skill">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+
+
+            <div class="col-md-8 py-5">
+                <!-- Second Col -->
+                <h1 id="namet2">Aman Wairagkar </h1>
+                <h2 id="role">Role</h2>
+
+                <div class="card">
+                    <div class="card-header">
+                        <H3 style="background-color: #C4C1A4;">Objective</H3>
+                        <p id="objt1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dicta ipsum
+                            incidunt. Ex omnis sint, distinctio illo accusantium ipsum labore soluta temporibus et amet,
+                            molestiae, voluptatum commodi ab voluptas tempore?
+                            Ut facilis at illum distinctio hic perferendis exercitationem porro tempora molestiae, natus
+                            perspiciatis quos doloremque et temporibus earum assumenda voluptatum eveniet aperiam animi
+                            id. Totam labore perspiciatis fugiat repellat repellendus.
+                            Harum fuga odit ipsa sit quisquam aut nostrum illo, perferendis reprehenderit nulla ea, quos
+                            deserunt. Nulla possimus totam earum culpa temporibus deleniti asperiores, facilis, placeat
+                            ea nisi rem, modi nihil.</p>
+                    </div>
+                    <card class="card-body"></card>
+                </div><br>
+
+
+                <div class="card">
+                    <div class="card-header">
+                        <H3 style="background-color: #C4C1A4;">Work-Experience</H3>
+                        <ul id="workt1">
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, praesentium!</li>
+
+
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, praesentium!</li>
+
+
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, praesentium!</li>
+                        </ul>
+                        <card class="card-body"></card>
+                    </div><br>
+
+
+                    <div class="card">
+                        <div class="card-header">
+                            <H3 style="background-color: #C4C1A4;">Academic-Qualification</H3>
+                            <ul id="academict1">
+                                <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, praesentium!</li>
+
+
+                                <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, praesentium!</li>
+
+
+                                <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, praesentium!</li>
+                            </ul>
+                            <card class="card-body"></card>
+                        </div><br>
+
+
+                    </div>
+
+                </div>
+                <div class="container md-3 text-center">
+                    <button onclick="printCV()" class="btn background" style="background-color: #24a0ed; 
+            margin-top: 10px;">
+                        Print CV</button>
+                </div>
+            </div>
+
+
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+                crossorigin="anonymous"></script>
+            <script src="app.js">
+
+            </script>
+</body>
+
+</html>

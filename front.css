@@ -1,0 +1,44 @@
+#default{
+    margin: 120px 60px 60px 80px ;
+    height: fit-content;
+    /* width: 700px; */
+}
+
+.card{
+    margin: auto;
+    border: 2px solid black;
+}
+
+.card-img-top{
+    border: 1px solid black;
+}
+.card-body{
+    border-radius: 20%;
+}
+
+#row1{
+    background:rgba(0,0,0,0.7) url('assests/background.webp');
+    background-blend-mode: darken;
+    
+   
+
+}
+
+#demo1{
+    
+    margin: 80px;
+    height: 550px;
+    width: 500px;
+}
+
+
+#create{
+    height: 80px;
+    width: 80px;
+}
+
+
+img:hover{
+   box-shadow: 5px 5px black;
+   
+}
