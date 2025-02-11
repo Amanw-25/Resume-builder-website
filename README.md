@@ -8,4 +8,4 @@
 - GitHub Repository: Find the entire codebase on GitHub for version control and collaborative contributions.
 
 
-Get started on your standout resume journey now! 🚀👔
+Get started on your standout resume journey now!
